@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140503171914) do
+ActiveRecord::Schema.define(version: 20140503203105) do
+
+  create_table "wishlist_items", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.decimal  "price"
+    t.integer  "wishlist_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "wishlists", force: true do |t|
     t.string   "name"
