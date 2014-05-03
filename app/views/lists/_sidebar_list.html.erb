@@ -1,0 +1,9 @@
+<div class='span-5 wishlist-sidebar-list'>
+      <h2>Lists</h2>
+      <ul>
+        <% @lists.each do |list| %>
+		  <li><%= link_to list.name, "/lists/#{list.id}", class: ("active" if list.id.to_s == params[:id]) %>
+        <% end %>
+        <li class="add"><a href="/lists/new">Add a list</a></li>
+      </ul>
+	 </div>

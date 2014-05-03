@@ -4,6 +4,7 @@ class ListsController < ApplicationController
 		render "empty" and return if @lists.count == 0
 	end
 	def show
+		@lists = Wishlist.all
 		@list = Wishlist.find params[:id]
 	end
 end
