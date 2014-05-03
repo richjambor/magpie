@@ -7,4 +7,7 @@ class ListsController < ApplicationController
 		@lists = Wishlist.all
 		@list = Wishlist.find params[:id]
 	end
+	def new
+		@list = Wishlist.new
+	end
 end

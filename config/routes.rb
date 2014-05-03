@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
- get '/lists/:id', to: 'lists#show' 
+ resources :lists, only: [:index, :show, :new]
  root to: 'lists#index'
 
 end
